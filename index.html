@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+    <style>
+        body {
+            background-color: rgb(223, 203, 173);
+        }
+        .button{
+            padding: 1px;
+            border-radius: 50%;
+            font-size:24vw;
+            box-shadow: 0 9px #999;
+            border-style: solid;
+            border-width: 5px;
+        }
+        .button:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        #b1 {
+            background-color:#0F5733; 
+            color: #0F5733;
+            position: fixed;
+            top: 34vh;
+            left: 36vw;
+        }
+        #b2 {
+            background-color:#1D48C9; 
+            color: #1D48C9;
+            position: fixed;
+            top: 58vh;
+            left: 18vw;
+
+        }
+        #b3 {
+            background-color:#D45011; 
+            color: #D45011;
+            position: fixed;
+            top: 10vh;
+            left: 52vw;
+        }
+        #b4 {
+            background-color:#0E0B0D; 
+            color: #0E0B0D;
+            position: fixed;
+            top: 58vh;
+            left: 52vw;
+        }
+        #b5 {
+            background-color:#D41114; 
+            color: #D41114;
+            position: fixed;
+            top: 10vh;
+            left: 18vw;
+        }
+        #sbm {
+            border-radius: 12px;
+            font-size:5vw;
+            border: none;
+            padding:2vh 7vw;
+            text-align: center;
+            background-color:#382141;
+            color: #c0ccbb;
+            box-shadow: 0 9px #999;
+            position: fixed;
+            top: 78vh;
+            left: 36vw;
+        }
+        #sbm:active{
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <title>My First Website</title>
+    </head>
+
+    <body>
+
+        <button onclick="button1()" class="button" id="b1">00</button>
+        <button onclick="button2()" class="button" id="b2">00</button>
+        <button onclick="button3()" class="button" id="b3">00</button>
+        <button onclick="button4()" class="button" id="b4">00</button>
+        <button onclick="button5()" class="button" id="b5">00</button>
+        <button onclick="submit()" id="sbm">Submit</button>
+
+
+        <script>
+
+            let counter = 0
+
+            function button1(){
+                if (counter == 0){
+                    counter++;
+                }
+                document.getElementById("b1").disabled = true;
+            }
+
+            function button2(){
+                if (counter == 1){
+                    counter++;
+                }
+                document.getElementById("b2").disabled = true;
+            }
+
+            function button3(){
+                if (counter==2){
+                    counter++;
+                }
+                document.getElementById("b3").disabled = true;
+            }
+
+            function button4(){
+                if (counter==3){
+                    counter++;
+                }
+                document.getElementById("b4").disabled = true;
+            }
+
+            function button5(){
+                if (counter==4){
+                    counter++;
+                }
+                document.getElementById("b5").disabled = true;
+            }
+
+            function submit(){
+                if (counter < 5){
+                    document.getElementById("b1").disabled = false;
+                    document.getElementById("b2").disabled = false;
+                    document.getElementById("b3").disabled = false;
+                    document.getElementById("b4").disabled = false;
+                    document.getElementById("b5").disabled = false;
+                    counter = 0;
+                }
+                else {
+                    window.location.href = "lookatthebinary.html";
+
+                }
+            }
+
+
+        </script>
+    
+    </body>
+
+</html>
